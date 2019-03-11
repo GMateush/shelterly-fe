@@ -1,0 +1,79 @@
+header {
+    background-image: linear-gradient(#00000098, #00000098), url('../../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+.main-nav {
+    /* float: right; doesn't work */
+    list-style: none;
+    margin-top: 50px;
+    margin-left: 390px;
+
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    padding: 6px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #c0392b;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+    /* float: left; */
+    margin-top: 5px;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: #fff;
+    font-size: 300%;
+    font-weight: 100;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.main-btn:link,
+.main-btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    background-color: #c0392b;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: background-color 0.2s, padding 0.2s, letter-spacing 0.2s;
+}
+
+.main-btn:hover,
+.main-btn:active {
+    background-color: #a43125;
+    padding: 10px 35px;
+    letter-spacing: 1px;
+  
+}

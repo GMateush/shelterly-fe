@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+ /* main color alizarin #c0392b */
+html {
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
