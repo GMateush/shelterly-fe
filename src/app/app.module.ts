@@ -3,14 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { SheltersComponent } from './shelters/shelters.component';
+import { ShelterShortComponent } from './shelters/shelter-short/shelter-short.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { ShelterDetailsComponent } from './shelters/shelter-details/shelter-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    SheltersComponent,
+    ShelterShortComponent,
+    NavbarComponent,
+    ShelterDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<div class="shelter-select">
+    <div class="container">
+      <div class="row">
+        <app-shelter-short
+        *ngFor="let shelter of shelters"
+        [shelter]="shelter">
+        </app-shelter-short>
+        <div class="col-md-4">
+          <h1>+</h1>
+        </div>
+    </div>
+</div>
+
