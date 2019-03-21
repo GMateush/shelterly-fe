@@ -1,3 +1,23 @@
-<p>
-  shelter-details works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 shelter-details">
+      <img src="../../../assets/images/city-placeholder.jpeg">
+      <h2 *ngIf="shelter">
+        {{shelter.shelterName}}
+      </h2>
+      <hr>
+      Pojemność schroniska {{shelter.capacity}}
+      <br>
+      Wolne miejsca w schronisku {{availableSpace}}
+    </div>
+    <div class="col-md-2 animal-short"
+    *ngFor="let animal of animals">
+      <app-animal-short
+      [animal]="animal"></app-animal-short>
+    </div>
+</div>
+
+
+
+
+

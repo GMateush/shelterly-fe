@@ -1,7 +1,9 @@
-.shelter-select {
-    background-color: transparent;
-    border-radius: 50px;
+
+.shelter-short {
+    background-color: white;
     border: 1px solid #c0392b;
-    padding: 5px 0;
-    height: 500px;
+    border-radius: 20px;
+    max-width: 100%;
+    padding-bottom: 30px;
+    margin: 0 5px;
 }

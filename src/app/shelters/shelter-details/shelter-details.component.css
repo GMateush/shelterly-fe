@@ -1,0 +1,27 @@
+.shelter-details {
+    background-color: #ffffff;
+    max-width: 100%;
+    border-radius: 20px;
+    height: 600px;
+}
+
+.shelter-details img {
+    height: 300px;
+    max-width: 100%;
+    border-radius: 200px;
+    margin-top: 10px;
+}
+
+.shelter-details h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 180%;
+}
+
+.animal-short {
+    background-color: #fff;
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 0 10px;
+    height: 300px;
+}

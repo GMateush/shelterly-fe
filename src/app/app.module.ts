@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ShelterDetailsComponent } from './shelters/shelter-details/shelter-details.component';
+import { AnimalShortComponent } from './animals/animal-short/animal-short.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShelterDetailsComponent } from './shelters/shelter-details/shelter-deta
     SheltersComponent,
     ShelterShortComponent,
     NavbarComponent,
-    ShelterDetailsComponent
+    ShelterDetailsComponent,
+    AnimalShortComponent
   ],
   imports: [
     BrowserModule,

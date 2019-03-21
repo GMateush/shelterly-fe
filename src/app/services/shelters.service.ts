@@ -15,4 +15,8 @@ export class SheltersService {
   getShelters(): Observable<Array<Shelter>> {
     return this.http.get<Array<Shelter>>(this.SHELTERS_API);
   }
+
+  getShelter(id: number): Observable<Shelter> {
+    return this.http.get<Shelter>(`${this.SHELTERS_API}/${id}`);
+  }
 }

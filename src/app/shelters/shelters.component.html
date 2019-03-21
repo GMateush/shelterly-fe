@@ -1,10 +1,11 @@
 <div class="shelter-select">
     <div class="container">
       <div class="row">
-        <app-shelter-short
-        *ngFor="let shelter of shelters"
-        [shelter]="shelter">
-        </app-shelter-short>
+        <div class="col-md-3 shelter-short"
+        *ngFor="let shelter of shelters">
+          <app-shelter-short
+          [shelter]="shelter"></app-shelter-short>
+        </div>
         <div class="col-md-4">
           <h1>+</h1>
         </div>
