@@ -22,6 +22,17 @@
     background-color: #fff;
     max-width: 100%;
     border-radius: 20px;
-    margin: 0 10px;
+    margin: 0 10px 10px 10px;
     height: 300px;
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+.animal-short:hover {
+    transform: scale(1.05);
+}
+
+.add-new {
+    text-align: center;
+    font-size: 200%;
 }

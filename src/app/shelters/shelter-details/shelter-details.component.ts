@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SheltersService } from 'src/app/services/shelters.service';
 import { Shelter } from 'src/app/models/shelter.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AnimalsService } from 'src/app/services/animals.service';
 import { Animal } from 'src/app/models/animal.model';
 
@@ -16,7 +16,10 @@ export class ShelterDetailsComponent implements OnInit {
   animals: Array<Animal>;
   availableSpace: number;
 
-  constructor(private route: ActivatedRoute, private sheltersService: SheltersService, private animalsService: AnimalsService) { }
+  constructor(private route: ActivatedRoute,
+              private sheltersService: SheltersService,
+              private animalsService: AnimalsService,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -32,8 +35,14 @@ export class ShelterDetailsComponent implements OnInit {
       this.animals = data;
       this.availableSpace = this.shelter.capacity - data.length;
     });
+  }
 
+  editAnimal(id: number) {
+    this.router.navigate(['/animals/edit', id]);
+  }
 
+  onAddNew() {
+    this.router.navigate(['/animals/edit/0']);
   }
 
 }

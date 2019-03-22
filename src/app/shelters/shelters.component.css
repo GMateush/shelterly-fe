@@ -6,4 +6,9 @@
     max-width: 100%;
     padding-bottom: 30px;
     margin: 0 5px;
+    transition: transform 0.1s;
+}
+
+.shelter-short:hover {
+    transform: scale(1.02);
 }

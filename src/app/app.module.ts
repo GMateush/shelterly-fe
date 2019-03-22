@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ShelterDetailsComponent } from './shelters/shelter-details/shelter-details.component';
 import { AnimalShortComponent } from './animals/animal-short/animal-short.component';
+import { AnimalEditComponent } from './animals/animal-edit/animal-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { AnimalShortComponent } from './animals/animal-short/animal-short.compon
     ShelterShortComponent,
     NavbarComponent,
     ShelterDetailsComponent,
-    AnimalShortComponent
+    AnimalShortComponent,
+    AnimalEditComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

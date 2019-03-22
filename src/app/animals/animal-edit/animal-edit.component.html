@@ -1,0 +1,35 @@
+<div class="col-md-2">
+  <form [formGroup]="animalForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label for="name">Imię</label>
+          <input type="text" formControlName="name" id="name" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="description">Opis</label>
+        <textarea formControlName="description" id="description" class="form-control" rows=4></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="race">Rasa</label>
+        <select formControlName="race" class="form-control" id="race">
+          <option [ngValue]="race.id" *ngFor="let race of races">{{race.raceName}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+          <label for="shelter">Schronisko</label>
+          <select formControlName="shelter" class="form-control" id="shelter">
+            <option [ngValue]="shelter.id" *ngFor="let shelter of shelters">{{shelter.shelterName}}</option>
+          </select>
+        </div>
+
+      <div class="form-group">
+        <label for="dateOfBirth">Data urodzenia</label>
+        <input type="date" id="dateOfBirth" formControlName="dateOfBirth" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!animalForm.valid">Zapisz</button>
+  </form>
+</div>
+

@@ -22,4 +22,5 @@ export class AnimalShortComponent implements OnInit {
     });
   }
 
+  
 }
