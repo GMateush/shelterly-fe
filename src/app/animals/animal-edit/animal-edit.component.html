@@ -1,5 +1,6 @@
-<div class="col-md-2">
+<div class="mx-auto col-md-6 animal-edit">
   <form [formGroup]="animalForm" (ngSubmit)="onSubmit()">
+    
       <div class="form-group">
           <label for="name">Imię</label>
           <input type="text" formControlName="name" id="name" class="form-control">
@@ -10,24 +11,38 @@
         <textarea formControlName="description" id="description" class="form-control" rows=4></textarea>
       </div>
 
-      <div class="form-group">
-        <label for="race">Rasa</label>
-        <select formControlName="race" class="form-control" id="race">
-          <option [ngValue]="race.id" *ngFor="let race of races">{{race.raceName}}</option>
-        </select>
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="race">Rasa</label>
+              <select formControlName="race" class="form-control" id="race">
+                <option [ngValue]="race.id" *ngFor="let race of races">{{race.raceName}}</option>
+              </select>
+            </div>
+      
+            <div class="form-group col-md-6">
+                <label for="shelter">Schronisko</label>
+                <select formControlName="shelter" class="form-control" id="shelter">
+                  <option [ngValue]="shelter.id" *ngFor="let shelter of shelters">{{shelter.shelterName}}</option>
+                </select>
+              </div>
       </div>
-
-      <div class="form-group">
-          <label for="shelter">Schronisko</label>
-          <select formControlName="shelter" class="form-control" id="shelter">
-            <option [ngValue]="shelter.id" *ngFor="let shelter of shelters">{{shelter.shelterName}}</option>
-          </select>
-        </div>
+      
 
       <div class="form-group">
         <label for="dateOfBirth">Data urodzenia</label>
         <input type="date" id="dateOfBirth" formControlName="dateOfBirth" class="form-control">
       </div>
+
+      <div class="form-group">
+        <label for="photo">Ścieżka URL do zdjęcia</label>
+        <input type="text" id="photo" formControlName="imageUrl" class="form-control" #imageUrl>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <img [src]="imageUrl.value" class="img-responsive">
+            </div>
+      </div>
+      
 
       <button type="submit" class="btn btn-primary" [disabled]="!animalForm.valid">Zapisz</button>
   </form>

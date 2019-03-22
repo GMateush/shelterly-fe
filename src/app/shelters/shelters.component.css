@@ -1,6 +1,15 @@
 
 .shelter-select {
-    margin-top: 200px;
+    margin-top: 170px;
+    
+    font-family: 'Lato';
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    
 }
 
 

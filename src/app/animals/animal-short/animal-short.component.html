@@ -1,3 +1,6 @@
-  <img src="../../../assets/images/animal-placeholder.jpeg" alt="Placeholder animal">
-  <h2>{{animal.name}}</h2>
-  <p *ngIf="race">Rasa: {{race.raceName}}</p>
+<div class="image-cropper">
+  <img [src]="animal.imageUrl" alt="Placeholder animal">
+</div>
+
+<h2>{{animal.name}}</h2>
+<p *ngIf="race">Rasa: {{race.raceName}}</p>

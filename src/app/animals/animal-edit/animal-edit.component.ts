@@ -14,6 +14,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./animal-edit.component.css']
 })
 export class AnimalEditComponent implements OnInit {
+  selectedPhoto = null;
   animal: Animal = new Animal();
 
   animalForm = this.fb.group({
@@ -21,7 +22,8 @@ export class AnimalEditComponent implements OnInit {
     description: [''],
     race: [''],
     dateOfBirth: [''],
-    shelter: ['']
+    shelter: [''],
+    imageUrl: ['']
   });
 
 
@@ -77,7 +79,8 @@ export class AnimalEditComponent implements OnInit {
       description: this.animal.description,
       dateOfBirth: this.animal.dateOfBirth,
       race: this.animal.raceId,
-      shelter: this.animal.shelterId
+      shelter: this.animal.shelterId,
+      imageUrl: this.animal.imageUrl
     });
   }
 
@@ -87,6 +90,12 @@ export class AnimalEditComponent implements OnInit {
       animal.dateOfBirth = this.animalForm.value.dateOfBirth;
       animal.raceId = this.animalForm.value.race;
       animal.shelterId = this.animalForm.value.shelter;
+      animal.imageUrl = this.animalForm.value.imageUrl;
   }
+
+  // onFileSelected(event) {
+  //   this.selectedPhoto = event.target.files[0];
+  //   console.log(this.selectedPhoto);
+  // }
 
 }
