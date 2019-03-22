@@ -1,30 +1,34 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 shelter-details">
-      <img src="../../../assets/images/city-placeholder.jpeg">
-      <div *ngIf="shelter" class="shelter-description">
-        <h2>
-            {{shelter.shelterName}}
-        </h2>
-        <hr>
-        Pojemność schroniska {{shelter.capacity}}
-        <br>
-        Wolne miejsca w schronisku {{availableSpace}}
+<div class="animals">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 shelter-details">
+        <img src="../../../assets/images/city-placeholder.jpeg">
+        <div *ngIf="shelter" class="shelter-description">
+          <h2>
+              {{shelter.shelterName}}
+          </h2>
+          <div class="shelter-description">
+            Pojemność schroniska {{shelter.capacity}}
+            <br>
+            Wolne miejsca w schronisku {{availableSpace}}
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-md-3 animal-short"
-    *ngFor="let animal of animals"
-    (click)="editAnimal(animal.id)">
-      <app-animal-short
-      [animal]="animal"></app-animal-short>
-    </div>
-    <div class="col-md-3 animal-short add-new" (click)="onAddNew()">+</div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3 animal-short"
+      *ngFor="let animal of animals"
+      (click)="editAnimal(animal.id)">
+        <app-animal-short
+        [animal]="animal"></app-animal-short>
       </div>
-    </div>
-    
+      <div class="col-md-3 animal-short add-new" (click)="onAddNew()">+</div>
+        </div>
+      </div>
+      
+  </div>
 </div>
+
 
 
 

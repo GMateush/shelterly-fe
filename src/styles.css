@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
  /* main color alizarin #c0392b */
+ * {
+      box-sizing: border-box;
+ }
 html {
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
 
 body {
-    background-image: linear-gradient(#00000098, #00000098), url('assets/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background: rgb(235, 235, 235);
 }
