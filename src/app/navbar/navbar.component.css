@@ -4,8 +4,9 @@ nav {
     box-shadow: 0 6px 6px #efefef;
 }
 
-.active:parent {
+.active {
     background: none;
+    box-shadow: none;
 }
 
 

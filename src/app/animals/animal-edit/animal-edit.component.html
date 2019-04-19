@@ -44,7 +44,8 @@
       </div>
       
 
-      <button type="submit" class="btn btn-primary" [disabled]="!animalForm.valid">Zapisz</button>
+      <button type="submit" class="btn btn-primary mr-1" [disabled]="!animalForm.valid">Zapisz</button>
+      <button type="button" *ngIf="animal.id" class="btn btn-dark" (click)="onDelete()">Usuń</button>
   </form>
 </div>
 

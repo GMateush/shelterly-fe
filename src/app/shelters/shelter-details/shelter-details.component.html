@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 shelter-details">
-        <img src="../../../assets/images/city-placeholder.jpeg">
+        <img [src]="shelter.imageUrl">
         <div *ngIf="shelter" class="shelter-description">
           <h2>
               {{shelter.shelterName}}
@@ -10,7 +10,9 @@
           <div class="shelter-description">
             Pojemność schroniska {{shelter.capacity}}
             <br>
-            Wolne miejsca w schronisku {{availableSpace}}
+            <p>Wolne miejsca w schronisku {{availableSpace}}</p>
+            <br>
+            <a routerLink="/shelters/edit/" class="btn btn-primary">Edytuj</a>
           </div>
         </div>
       </div>

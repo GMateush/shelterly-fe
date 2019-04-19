@@ -1,12 +1,17 @@
 <div class="shelter-select">
   <h2>Wybierz schronisko</h2>
     <div class="container">
-      <div class="row">
+      <div class="row" *ngIf="loaded">
         <div class="col-md-3 shelter-short"
         *ngFor="let shelter of shelters">
           <app-shelter-short
           [shelter]="shelter"></app-shelter-short>
         </div>
+    </div>
+    <div class="row" *ngIf="!loaded">
+        <div class="spinner-border mx-auto" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
     </div>
 </div>
 

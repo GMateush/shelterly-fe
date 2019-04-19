@@ -10,6 +10,7 @@ import { Race } from 'src/app/models/race.model';
 })
 export class AnimalShortComponent implements OnInit {
   @Input() animal: Animal;
+  photo: string;
 
   race: Race;
 
@@ -20,7 +21,9 @@ export class AnimalShortComponent implements OnInit {
     .subscribe(data => {
       this.race = data;
     });
+    this.photo = this.animal.imageUrl;
+    if (this.photo === null) {
+      this.photo = 'https://images.pexels.com/photos/1203803/pexels-photo-1203803.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+    }
   }
-
-  
 }

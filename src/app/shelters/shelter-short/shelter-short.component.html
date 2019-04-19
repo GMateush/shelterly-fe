@@ -1,5 +1,5 @@
 <a routerLink="/shelters/{{shelter.id}}">
-    <img class="mx-auto d-block" src="../../../assets//images/city-placeholder.jpeg" alt="Placeholder city">
+    <img class="mx-auto d-block" [src]="shelter.imageUrl" alt="Placeholder city">
     <h2>{{shelter.shelterName}}</h2>
     <div class="shelter-short-text">
         Miasto: {{shelter.address}}

@@ -28,4 +28,8 @@ export class AnimalsService {
   addAnimal(animal: Animal) {
     return this.http.post(`${this.ANIMALS_API}`, animal);
   }
+
+  deleteAnimal(id: number) {
+    return this.http.delete(`${this.ANIMALS_API}/${id}`);
+  }
 }

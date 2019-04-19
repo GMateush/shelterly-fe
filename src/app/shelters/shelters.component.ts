@@ -9,6 +9,7 @@ import { Shelter } from '../models/shelter.model';
 })
 export class SheltersComponent implements OnInit {
   shelters: Array<Shelter>;
+  loaded =  false;
 
 
   constructor(private sheltersService: SheltersService) { }
@@ -17,6 +18,7 @@ export class SheltersComponent implements OnInit {
     this.sheltersService.getShelters()
     .subscribe(data => {
       this.shelters = data;
+      this.loaded = true;
     });
   }
 

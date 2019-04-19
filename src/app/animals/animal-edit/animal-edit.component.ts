@@ -6,7 +6,7 @@ import { SheltersService } from 'src/app/services/shelters.service';
 import { Shelter } from 'src/app/models/shelter.model';
 import { Animal } from 'src/app/models/animal.model';
 import { AnimalsService } from 'src/app/services/animals.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-animal-edit',
@@ -16,6 +16,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AnimalEditComponent implements OnInit {
   selectedPhoto = null;
   animal: Animal = new Animal();
+  animalId: number;
 
   animalForm = this.fb.group({
     name: [''],
@@ -34,12 +35,13 @@ export class AnimalEditComponent implements OnInit {
               private sheltersService: SheltersService,
               private fb: FormBuilder,
               private animalsService: AnimalsService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe( data => {
-      const id = +data.get('id');
-      this.getAnimal(id);
+      this.animalId = +data.get('id');
+      this.getAnimal(this.animalId);
     });
 
     this.racesService.getRaces().subscribe(data => {
@@ -67,10 +69,16 @@ export class AnimalEditComponent implements OnInit {
 
     if (this.animal.id === undefined) {
       console.log(this.animal);
-      this.animalsService.addAnimal(this.animal).subscribe();
+      this.animalsService.addAnimal(this.animal).subscribe(data => {
+        this.router.navigateByUrl(`/shelters/${this.animal.shelterId}`);
+      });
     } else {
-      this.animalsService.updateAnimal(this.animal).subscribe();
+      this.animalsService.updateAnimal(this.animal).subscribe(data => {
+        this.router.navigateByUrl(`/shelters/${this.animal.shelterId}`);
+      });
     }
+
+    ;
   }
 
   private setForm() {
@@ -91,6 +99,12 @@ export class AnimalEditComponent implements OnInit {
       animal.raceId = this.animalForm.value.race;
       animal.shelterId = this.animalForm.value.shelter;
       animal.imageUrl = this.animalForm.value.imageUrl;
+  }
+
+  onDelete() {
+    this.animalsService.deleteAnimal(this.animalId).subscribe(data => {
+      this.router.navigateByUrl(`/shelters/${this.animal.shelterId}`);
+    });
   }
 
   // onFileSelected(event) {
