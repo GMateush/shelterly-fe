@@ -3,4 +3,4 @@
 </div>
 
 <h2>{{animal.name}}</h2>
-<p *ngIf="race">Rasa: {{race.raceName}}</p>
+<p *ngIf="animal.description">{{animal.description.substring(0,16)}}...</p>

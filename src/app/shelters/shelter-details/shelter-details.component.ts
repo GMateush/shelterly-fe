@@ -45,4 +45,8 @@ export class ShelterDetailsComponent implements OnInit {
     this.router.navigate(['/animals/edit/0']);
   }
 
+  editShelter(id: number) {
+    this.router.navigate(['shelters/edit', id]);
+  }
+
 }

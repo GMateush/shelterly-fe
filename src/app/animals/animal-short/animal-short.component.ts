@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Animal } from 'src/app/models/animal.model';
 import { RacesService } from 'src/app/services/races.service';
 import { Race } from 'src/app/models/race.model';
+import { animationFrame } from 'rxjs/internal/scheduler/animationFrame';
 
 @Component({
   selector: 'app-animal-short',

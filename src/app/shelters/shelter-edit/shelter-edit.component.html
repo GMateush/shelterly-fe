@@ -1,0 +1,38 @@
+<div class="mx-auto col-md-6 shelter-edit">
+  <form [formGroup]="shelterForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="shelterName">Nazwa</label>
+      <input type="text" formControlName="shelterName" id="shelterName" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Opis</label>
+      <textarea formControlName="description" id="description" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Adres</label>
+        <input type="text" formControlName="address" id="address" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="capacity">Maksymalna pojemność schroniska</label>
+        <input type="text" formControlName="capacity" id="capacity" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="photo">Ścieżka URL do zdjęcia</label>
+        <input type="text" id="photo" formControlName="imageUrl" class="form-control" #imageUrl>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <img [src]="imageUrl.value" class="img-responsive">
+            </div>
+      </div>
+
+    <button type="submit" class="btn btn-primary mr-1" [disabled]="!shelterForm.valid">Zapisz</button>
+
+
+  </form>
+</div>

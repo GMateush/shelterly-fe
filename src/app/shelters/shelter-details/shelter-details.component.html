@@ -12,7 +12,7 @@
             <br>
             <p>Wolne miejsca w schronisku {{availableSpace}}</p>
             <br>
-            <a routerLink="/shelters/edit/" class="btn btn-primary">Edytuj</a>
+            <button (click)="editShelter(shelter.id)" class="btn btn-primary">Edytuj</button>
           </div>
         </div>
       </div>

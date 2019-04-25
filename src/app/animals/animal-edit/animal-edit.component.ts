@@ -77,8 +77,6 @@ export class AnimalEditComponent implements OnInit {
         this.router.navigateByUrl(`/shelters/${this.animal.shelterId}`);
       });
     }
-
-    ;
   }
 
   private setForm() {

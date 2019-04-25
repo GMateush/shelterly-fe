@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { SheltersComponent } from './shelters/shelters.component';
 import { ShelterDetailsComponent } from './shelters/shelter-details/shelter-details.component';
 import { AnimalEditComponent } from './animals/animal-edit/animal-edit.component';
+import { ShelterEditComponent } from './shelters/shelter-edit/shelter-edit.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'home', component: HeaderComponent },
   { path: 'shelters', component: SheltersComponent },
   { path: 'shelters/:id', component: ShelterDetailsComponent },
-  { path: 'animals/edit/:id', component: AnimalEditComponent }
+  { path: 'animals/edit/:id', component: AnimalEditComponent },
+  { path: 'shelters/edit/:id', component: ShelterEditComponent }
 ];
 
 @NgModule({

@@ -12,6 +12,7 @@ import { ShelterDetailsComponent } from './shelters/shelter-details/shelter-deta
 import { AnimalShortComponent } from './animals/animal-short/animal-short.component';
 import { AnimalEditComponent } from './animals/animal-edit/animal-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ShelterEditComponent } from './shelters/shelter-edit/shelter-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     ShelterDetailsComponent,
     AnimalShortComponent,
-    AnimalEditComponent
+    AnimalEditComponent,
+    ShelterEditComponent
   ],
   imports: [
     BrowserModule,
