@@ -1,0 +1,52 @@
+.animal {
+    margin-top: 150px;
+}
+.animal-info {
+    background: #fff;
+    max-width: 100%;
+    border-radius: 20px;
+    height: 600px;
+    -webkit-box-shadow: 0px 17px 27px -11px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 17px 27px -11px rgba(0,0,0,0.53);
+    box-shadow: 0px 17px 27px -11px rgba(0,0,0,0.53);
+}
+
+.animal-description {
+    background: #fff;
+    max-width: 100%;
+    border-radius: 20px;
+    
+    -webkit-box-shadow: 0px 17px 27px -11px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 17px 27px -11px rgba(0,0,0,0.53);
+    box-shadow: 0px 17px 27px -11px rgba(0,0,0,0.53);
+}
+
+.animal-info img {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 45%;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 180%;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #c0392b;
+    content: " ";
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.animal-summary {
+    text-align: center;
+}
+
+.animal-description p{
+    margin: 20px 10px;
+}

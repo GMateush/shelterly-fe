@@ -12,7 +12,8 @@
             <br>
             <p>Wolne miejsca w schronisku {{availableSpace}}</p>
             <br>
-            <button (click)="editShelter(shelter.id)" class="btn btn-primary">Edytuj</button>
+            <button (click)="editShelter(shelter.id)" class="btn btn-primary mr-1">Edytuj</button>
+            <button (click)="goBack()" class="btn btn-dark">Powrót</button>
           </div>
         </div>
       </div>
@@ -20,7 +21,7 @@
         <div class="row">
           <div class="col-md-3 animal-short"
       *ngFor="let animal of animals"
-      (click)="editAnimal(animal.id)">
+      (click)="showDetails(animal.id)">
         <app-animal-short
         [animal]="animal"></app-animal-short>
       </div>

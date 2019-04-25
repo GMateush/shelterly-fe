@@ -1,0 +1,19 @@
+<div class="container animal">
+  <div class="row">
+    <div class="col-md-4 mr-4 animal-info">
+          <img [src]="animal.imageUrl">
+          <h2>{{animal.name}}</h2>
+          <div class="animal-summary">
+              <p>{{shelter.shelterName}}</p>
+              <p>{{raceName}}</p>
+              <p *ngIf="animal.dateOfBirth">Urodzony x</p>
+              <button (click)="editAnimal(animal.id)" class="btn btn-primary mr-1">Edytuj</button>
+              <button (click)="goBack(animal.shelterId)" class="btn btn-dark">Powrót</button>
+          </div>
+    </div>
+    <div class="col-md-7 animal-description">
+      <h2>O zwierzaku:</h2>
+      <p>{{animal.description}}</p>
+    </div>
+  </div>
+</div>

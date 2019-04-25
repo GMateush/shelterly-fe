@@ -11,7 +11,7 @@ import { Animal } from 'src/app/models/animal.model';
   styleUrls: ['./shelter-details.component.css']
 })
 export class ShelterDetailsComponent implements OnInit {
-  shelter: Shelter = null;
+  shelter = new Shelter();
   shelterId: number;
   animals: Array<Animal>;
   availableSpace: number;
@@ -49,4 +49,11 @@ export class ShelterDetailsComponent implements OnInit {
     this.router.navigate(['shelters/edit', id]);
   }
 
+  showDetails(id: number) {
+    this.router.navigate(['/animals', id]);
+  }
+
+  goBack() {
+    this.router.navigate(['/shelters']);
+  }
 }
